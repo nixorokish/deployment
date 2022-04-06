@@ -10,8 +10,7 @@ function addInputBoxes() {
 
     const addressesDiv = document.querySelector('#addresses') // find addresses div
 
-    addressesDiv.appendChild(addrInput) // append addresses div
-    addressesDiv.appendChild(linebreak)
+    addressesDiv.appendChild(addrInput, linebreak) // append addresses div
 
     const nicknameInput = document.createElement('input') // create address input
     nicknameInput.type = 'text'
@@ -19,8 +18,7 @@ function addInputBoxes() {
 
     const nicknamesDiv = document.querySelector('#nicknames') // find nicknames div
 
-    nicknamesDiv.appendChild(nicknameInput)
-    nicknamesDiv.appendChild(linebreak)
+    nicknamesDiv.appendChild(nicknameInput, linebreak)
 }
 
 addAddressBtn.addEventListener('click', addInputBoxes)
