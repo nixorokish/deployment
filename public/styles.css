@@ -3,5 +3,7 @@ h1 {
 }
 
 div.inputs {
-    display:flex
+    display:flex;
+    align-items:center;
+    background: lightgray
 }
