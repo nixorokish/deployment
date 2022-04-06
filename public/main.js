@@ -4,21 +4,27 @@ const addAddressBtn = document.querySelector('#newAddressBtn')
 const linebreak = document.createElement("br")
 
 function addInputBoxes() {
-    const addrInput = document.createElement('input') // create address input
-    addrInput.type = 'text'
-    addrInput.placeholder = 'copy address here'
+    const items = document.getElementsByClassName('#addresses')
+    
+    if (items.length === 0) {
+        const addrInput = document.createElement('input') // create address input
+        addrInput.type = 'text'
+        addrInput.placeholder = 'copy address here'
 
-    const addressesDiv = document.querySelector('#addresses') // find addresses div
+        const addressesDiv = document.querySelector('#addresses') // find addresses div
 
-    addressesDiv.appendChild(addrInput, linebreak) // append addresses div
+        addressesDiv.appendChild(addrInput, linebreak) // append addresses div
 
-    const nicknameInput = document.createElement('input') // create address input
-    nicknameInput.type = 'text'
-    nicknameInput.placeholder = 'add a nickname'
+        const nicknameInput = document.createElement('input') // create address input
+        nicknameInput.type = 'text'
+        nicknameInput.placeholder = 'add a nickname'
 
-    const nicknamesDiv = document.querySelector('#nicknames') // find nicknames div
+        const nicknamesDiv = document.querySelector('#nicknames') // find nicknames div
 
-    nicknamesDiv.appendChild(nicknameInput, linebreak)
+        nicknamesDiv.appendChild(nicknameInput, linebreak)
+    }
 }
 
 addAddressBtn.addEventListener('click', addInputBoxes)
+
+// document.getElementsByClassName will be an array
