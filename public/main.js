@@ -4,12 +4,21 @@ const addAddressBtn = document.querySelector('#newAddressBtn')
 const linebreak = document.createElement("br")
 
 function addInputBoxes() {
-    const addrInput = document.createElement('input');
-    addrInput.type = 'text';
-    addrInput.name = 'test';
-    const inputsDiv = document.querySelector('#inputs')
-    inputsDiv.appendChild(addrInput)
-    inputsDiv.appendChild(linebreak)
+    const makeInputField = document.createElement('input') // create address input
+    makeInputField.type = 'text'
+    makeInputField.placeholder = 'copy address here'
+
+    const addressesDiv = document.querySelector('#addresses') // find addresses div
+
+    addressesDiv.appendChild(makeInputField) // append addresses div
+    addressesDiv.appendChild(linebreak)
+
+    makeInputField.placeholder = 'add a nickname'
+
+    const nicknamesDiv = document.querySelector('#nicknames') // find nicknames div
+
+    nicknamesDiv.appendChild(makeInputField)
+    nicknamesDiv.appendChild(linebreak)
 }
 
 addAddressBtn.addEventListener('click', addInputBoxes)
