@@ -2,7 +2,7 @@ h1 {
     color:red;
 }
 
-form.inputs {
+div.inputs {
     display:flex;
     align-items:center;
     background: lightgray
