@@ -42,7 +42,7 @@ function addInputBoxes() {
 
 // calling an invalid function
 const getError = () => {
-    axios.get('/api/function')
+    axios.get('/api/functions')
     .then(res => console.log(res.data))
 }
 
