@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 app.get('/api/functions', () => {
     try {invalidFunction();
     } catch(e) {
-        rollbar.critical(e);
+        rollbar.error(e);
     }
 })
 
