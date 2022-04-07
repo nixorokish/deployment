@@ -38,6 +38,14 @@ function addInputBoxes() {
     }
 }
 
-addAddressBtn.addEventListener('click', addInputBoxes)
+
+
+
+const get = () => {
+    axios.get('/api/function')
+    .then(res => console.log(res.data))
+}
+
+addAddressBtn.addEventListener('click', get)
 
 // document.getElementsByClassName will be an array
