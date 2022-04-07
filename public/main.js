@@ -46,6 +46,11 @@ const getError = () => {
     .then(res => console.log(res.data))
 }
 
+const getErrorAgain = () => {
+    axios.get('/')
+    .then(res => console.log(res.data))
+}
+
 // adding the invalid function to the button event listener
 addAddressBtn.addEventListener('click', getError)
 

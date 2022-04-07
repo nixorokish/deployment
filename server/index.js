@@ -26,6 +26,13 @@ app.get('/', (req, res) => {
 app.get('/api/functions', () => {
     try {invalidFunction();
     } catch(e) {
+        rollbar.log(e);
+    }
+})
+
+app.get('/', () => {
+    try {invalidFunction2();
+    } catch(e) {
         rollbar.error(e);
     }
 })
