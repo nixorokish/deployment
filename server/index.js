@@ -30,7 +30,7 @@ app.get('/api/functions', () => {
     }
 })
 
-app.get('/', () => {
+app.get('/api/whatthefuck', () => {
     try {invalidFunction2();
     } catch(e) {
         rollbar.error(e);

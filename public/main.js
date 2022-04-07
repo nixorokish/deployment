@@ -47,11 +47,11 @@ const getError = () => {
 }
 
 const getErrorAgain = () => {
-    axios.get('/')
+    axios.get('/api/whatthefuck')
     .then(res => console.log(res.data))
 }
 
 // adding the invalid function to the button event listener
-addAddressBtn.addEventListener('click', getError)
+addAddressBtn.addEventListener('click', getErrorAgain)
 
 // document.getElementsByClassName will be an array
