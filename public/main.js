@@ -40,12 +40,13 @@ function addInputBoxes() {
 
 
 
-
-const get = () => {
+// calling an invalid function
+const getError = () => {
     axios.get('/api/function')
     .then(res => console.log(res.data))
 }
 
-addAddressBtn.addEventListener('click', get)
+// adding the invalid function to the button event listener
+addAddressBtn.addEventListener('click', getError)
 
 // document.getElementsByClassName will be an array

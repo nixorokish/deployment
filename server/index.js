@@ -21,10 +21,12 @@ app.use(express.static('public')) //static is css, js files, in front end etc.
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../index.html'))
 })
-app.get('/api/function', () => {
+
+// setting up an invalid function to log an error to rollbar
+app.get('/api/functions', () => {
     try {invalidFunction();
     } catch(error) {
-        rollbar.error(error);
+        rollbar.critical(error);
     }
 })
 
