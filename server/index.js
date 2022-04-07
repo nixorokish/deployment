@@ -30,10 +30,10 @@ app.get('/api/functions', () => {
     }
 })
 
-app.get('/api/whatthefuck', () => {
-    try {invalidFunction2();
+app.get('/api/whatthefuckity', () => {
+    try {invalidFunction3();
     } catch(e) {
-        rollbar.error(e);
+        rollbar.critical(e);
     }
 })
 

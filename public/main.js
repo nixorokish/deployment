@@ -47,7 +47,7 @@ const getError = () => {
 }
 
 const getErrorAgain = () => {
-    axios.get('/api/whatthefuck')
+    axios.get('/api/whatthefuckity')
     .then(res => console.log(res.data))
 }
 
