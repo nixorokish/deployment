@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 })
 app.get('/', (req, res) => {
     try {
-        invalidFunction(res);
+        res.invalidFunction();
     } catch (error) {
         rollbar.error(error);
     }
